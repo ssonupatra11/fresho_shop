@@ -1,0 +1,150 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    background-color: rgb(248, 248, 248);
+}
+
+div {
+    border-radius: 6px;
+    height: 450px;
+    width: 60%;
+    background-image: linear-gradient(to right, rgb(61, 255, 136), rgb(81, 255, 0));
+    margin: 155px auto;
+}
+
+h1 {
+    padding-top: 3%;
+    text-align: center;
+    color: rgba(94, 94, 94, 0.493);
+    font-size: 23px;
+}
+
+h3 {
+    padding-top: 7%;
+    font-family: monospace;
+    padding-left: 10%;
+    color: rgb(0, 139, 97);
+    font-size: 23px;
+}
+
+h2 {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    background-color: white;
+    text-align: center;
+    margin-top: auto;
+    color: rgb(255, 255, 70);
+    font-size: 70px;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+}
+
+h4 {
+    padding-top: 3%;
+    padding-right: 10%;
+    text-align: right;
+}
+
+input {
+    padding-left: 1%;
+    width: 200px;
+    color: white;
+    border: none;
+    border-bottom: 1.5px solid white;
+    background-color: transparent;
+}
+
+input::placeholder {
+    color: rgba(94, 94, 94, 0.493);
+}
+
+.button {
+    border: none;
+    border-radius: 5px;
+    color: white;
+    width: 200px;
+    height: 40px;
+    font-size: 19px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.63);
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: rgba(255, 166, 0, 0.664);
+}
+
+img {
+    height: 70px;
+    width: 70px;
+}
+
+@media screen and (max-width: 1030px) {
+    div {
+        margin: 160px auto;
+        width: 70%;
+    }
+    h2 {
+        font-size: 50px;
+    }
+    img {
+        height: 50px;
+        width: 50px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        background-image: linear-gradient(to right, rgb(61, 255, 136), rgb(81, 255, 0));
+    }
+    div {
+        margin: 0% auto;
+        margin-bottom: 0%;
+        background-image: none;
+        width: 100%;
+    }
+    h1 {
+        padding-top: 5%;
+        font-size: 20px;
+    }
+    h3 {
+        padding-left: 2%;
+        padding-top: 30%;
+    }
+    h2 {
+        font-size: 40px;
+    }
+    h4 {
+        padding-top: 6%;
+        padding-right: 1%;
+    }
+    input {
+        width: 150px;
+    }
+    .button {
+        width: 150px;
+        height: 30px;
+    }
+    img {
+        height: 40px;
+        width: 40px;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    h1 {
+        padding-top: 10%;
+    }
+    h3 {
+        padding-left: 1%;
+        padding-top: 11%;
+    }
+    h4 {
+        padding-top: 9%;
+        padding-right: 1%;
+    }
+}

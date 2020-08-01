@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresho Login</title>
+    <link rel="stylesheet" href="login.css">
+    <script type="text/javascript">
+        function check() {
+            var user_name = document.getElementById("uname").value;
+            var user_password = document.getElementById("upass").value;
+            if (user_name.length == 0) {
+                alert("username should not be blank");
+                return false;
+            }
+            if (user_password.length < 8) {
+                alert("password cannot be less than 8 characters.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <form action="next_log.php" method="post">
+            <h2>Fresho Shop<img src="vegi_cart.png" alt="vegitable_image"></h2>
+            <h3>USER LOGIN</h3>
+            <h1>Username <input type="text" placeholder="enter username" name="uname" id="uname"></h1>
+            <h1>Password &nbsp;<input type="password" placeholder="enter password" name="upass" id="upass"></h1>
+            <h4><input type="submit" value="Login" class="button" onclick="return check();"></h4>
+            <h4><a href="register.html">New Register</a></h4>
+        </form>
+    </div>
+</body>
+
+</html>

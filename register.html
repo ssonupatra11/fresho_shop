@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresho Register</title>
+    <link rel="stylesheet" href="register.css">
+    <script>
+        function valid() {
+            var user_name = document.getElementById("uname").value;
+            var user_password = document.getElementById("upass").value;
+            var user_password1 = document.getElementById("upass1").value;
+            var user_phone = document.getElementById("uphone").value;
+            var user_address = document.getElementById("uaddr").value;
+            var user_age = document.getElementById("uage").value;
+            var user_email = document.getElementById("uemail").value;
+            if (user_name.length == 0) {
+                alert("username must not be blank");
+                return false;
+            }
+            if (user_password.length < 8) {
+                alert("password must not be less than 8");
+                return false;
+            }
+            if (user_password1.length < 8) {
+                alert("password must not be less than 8");
+                return false;
+            }
+            if (user_phone.length < 10) {
+                alert("phone number must not be less than 10");
+                return false;
+            }
+            if (user_address.length == 0) {
+                alert("address must not be blank");
+                return false;
+            }
+            if (user_age.length == 0) {
+                alert("age must not be blank");
+                return false;
+            }
+            if (user_email.length == 0) {
+                alert("email must not be blank");
+                return false;
+            }
+            if ((user_password).equals(user_password1)) {
+                alert("password must be same");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <form action="next_reg.php" method="post">
+            <h2>Fresho Shop<img src="vegi_cart.png" alt="vegitable_image"></h2>
+            <h3>USER REGISTER</h3>
+            <h1>Enter Name</h1>
+            <h1><input type="text" placeholder="enter username" name="uname" id="uname"></h1>
+            <h1>Password</h1>
+            <h1><input type="password" placeholder="password" name="upass" id="upass"></h1>
+            <h1>Confirm Password</h1>
+            <h1><input type="password" placeholder="enter password again" id="upass1"></h1>
+            <h1>Phone Number</h1>
+            <h1><input type="text" placeholder="type phone number" name="uphone" id="uphone"></h1>
+            <h1>Address</h1>
+            <h1><input type="text" placeholder="enter address" name="uaddr" id="uaddr"></h1>
+            <h1>Gender</h1>
+            <h1><input type="radio" name="genn" id="ugen">Male <br><input type="radio" name="gen" id="ugen">Female</h1>
+            <h1>Email</h1>
+            <h1><input type="email" placeholder="xyz@gmail.com" name="uemail" id="uemail"></h1>
+            <h4><input type="submit" value="Register" class="button" onclick="return valid();"></h4>
+        </form>
+    </div>
+</body>
+
+</html>
